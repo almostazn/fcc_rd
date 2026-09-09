@@ -24,7 +24,7 @@ CUSTOMER_CHECKIN() {
 
   INSERT_APPOINTMENT_RESULT=$($PSQL "INSERT INTO appointments(customer_id, service_id, time) VALUES($CUSTOMER_ID, $2, '$SERVICE_TIME')")
 
-  echo -e "\nI have put you down for a $1 at $SERVICE_TIME, $CUSTOMER_NAME_FORMATTED."
+  echo -e "\nI have put you down for a $1 at $SERVICE_TIME, $CUSTOMER_NAME_FORMATTED.\n"  
 }
 
 SERVICE_MENU() {
@@ -54,5 +54,5 @@ SERVICE_MENU() {
 }
 
 
-echo -e "\n~~~~~ MY SALON ~~~~~\n"
+echo -e "\n~~~~~ MY SALON ~~~~~"
 SERVICE_MENU "Welcome to My Salon, how can I help you?\n"
